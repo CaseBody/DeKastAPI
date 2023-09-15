@@ -19,7 +19,7 @@ namespace DeKastAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<CheckInResultModel>> Get([FromQuery] int AbonnementId)
+        public async Task<ActionResult<CheckInResultModel>> Put([FromQuery] int AbonnementId)
         {
             var abonnement = _deKastContext.Abonnementen.FirstOrDefault(x => x.Id == AbonnementId && x.IsActive);
 
